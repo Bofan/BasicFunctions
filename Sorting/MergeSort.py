@@ -1,1 +1,0 @@
-def mergeSort(nums):
