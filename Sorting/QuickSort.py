@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 """
 This file uses the Lomuto partitioning scheme, 
-  whereby the pivot for each subarray is the last element.
+  whereby the pivot for each sub/array is the last element.
 Best- and average-case runtimes for quicksort are O(nlogn).
 When an array has already been sorted, 
   this algorithm degrades to a runtime of O(n^2).
