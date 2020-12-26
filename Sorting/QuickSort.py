@@ -12,7 +12,7 @@ def partition(nums, lo, hi):
     """
     Sorts an array into two portions - 
       one with elements smaller than a pre-selected "pivot" element
-      and one with elements larger.
+      and one with elements larger than or equal to said pivot.
     Parameters
         "nums" - The given sub/array.
         "lo" - The index of the first element in the sub/array to be sorted.
@@ -23,7 +23,8 @@ def partition(nums, lo, hi):
     pivot = hi
     i = lo
     while pivot > i:
-        # Move elements larger than the pivot element after said pivot.
+        # Move elements larger than or equal to the pivot element 
+        #   to the position after said pivot.
         if nums[i] >= nums[pivot]:
             nums[i], nums[pivot-1], nums[pivot] = \
               nums[pivot-1], nums[pivot], nums[i]
