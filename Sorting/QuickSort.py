@@ -25,9 +25,9 @@ def partition(nums, lo, hi):
     pivot = hi
     i = lo
     while pivot > i:
-        # Move elements larger than or equal to the pivot element 
+        # Move elements larger than the pivot element 
         #   to the position after said pivot.
-        if nums[i] >= nums[pivot]:
+        if nums[i] > nums[pivot]:
             nums[i], nums[pivot-1], nums[pivot] = \
               nums[pivot-1], nums[pivot], nums[i]
             pivot -= 1
@@ -49,6 +49,8 @@ def quickSort(nums, lo, hi):
     """
     if lo < hi:
         p = partition(nums, lo, hi)
+        # After the call to the partition() function, the element at 
+        #   position p will be at the correct position in the array.
         quickSort(nums, lo, p-1)
         quickSort(nums, p+1, hi)
 
