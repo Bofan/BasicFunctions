@@ -15,7 +15,7 @@ def partition(nums, lo, hi):
       and one with elements larger than or equal to said pivot.
     
     Parameters
-      > "nums" - The given sub/array.
+      > "nums" - The given array.
       > "lo" - The index of the first element in the sub/array to be sorted.
       > "hi" - The index of the last element in the sub/array to be sorted.
     
@@ -40,12 +40,12 @@ def quickSort(nums, lo, hi):
     Recursively sorts the higher- and lower-valued halves of the sub/array.
     
     Parameters
-      > "nums" - The given sub/array.
+      > "nums" - The given array.
       > "lo" - The index of the first element in the sub/array to be sorted.
       > "hi" - The index of the last element in the sub/array to be sorted.
     
     Returns
-        NONE
+        NONE - This function sorts the given array argument in place.
     """
     if lo < hi:
         p = partition(nums, lo, hi)
